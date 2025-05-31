@@ -8,14 +8,14 @@ import ssl
 import logging
 from datetime import datetime
 
-# Opsiyonel: Renkli log çıktısı için colorlog kullan
+
 try:
     from colorlog import ColoredFormatter
     use_colorlog = True
 except ImportError:
     use_colorlog = False
 
-# Global değişkenler
+
 listen = False
 command = False
 upload = False
@@ -27,10 +27,9 @@ use_ssl = False
 verbose = False
 log_file = ""
 
-# Komut beyaz listesi (isteğe bağlı güvenlik için)
+
 ALLOWED_COMMANDS = ["ls", "dir", "whoami", "hostname", "ipconfig", "ifconfig"]
 
-# Logging konfigürasyonu
 
 def setup_logging():
     if use_colorlog:
